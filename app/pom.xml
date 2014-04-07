@@ -398,7 +398,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.james</groupId>
-            <artifactId>apache-james-mailbox-jpa</artifactId>
+            <artifactId>apache-james-mailbox-openjpa</artifactId>
             <scope>runtime</scope>
             <exclusions>
                 <exclusion>
@@ -811,6 +811,20 @@
                         <artifactId>maven-antrun-plugin</artifactId>
                         <version>1.2</version>
                         <executions>
+                            <execution>
+                                <id>create-empty-dirs</id>
+                                <phase>prepare-package</phase>
+                                <configuration>
+                                    <tasks>
+                                        <!-- git does not store empty dirs and maven-war-plugin
+                                        fails if the source dir does not exist -->
+                                        <mkdir dir="${basedir}/src/main/config/war"/>
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
                             <execution>
                                 <phase>package</phase>
                                 <configuration>

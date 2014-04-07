@@ -577,7 +577,7 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.james</groupId>
-                <artifactId>apache-james-mailbox-jpa</artifactId>
+                <artifactId>apache-james-mailbox-openjpa</artifactId>
                 <version>${mailbox.version}</version>
             </dependency>
             <dependency>
