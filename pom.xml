@@ -1214,6 +1214,15 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <!-- disable local OBR updates to avoid problems where non-OSGI Manifests
+                    get stored in .m2/repository -->
+                    <obrRepository>NONE</obrRepository>
+                </configuration>
+            </plugin>
+            <plugin>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.0</version>
             </plugin>
@@ -1250,15 +1259,6 @@
                   </pluginExecutions>
                 </lifecycleMappingMetadata>
               </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <!-- disable local OBR updates to avoid problems where non-OSGI Manifests
-                    get stored in .m2/repository -->
-                    <obrRepository>NONE</obrRepository>
-                </configuration>
             </plugin>
           </plugins>
         </pluginManagement>
