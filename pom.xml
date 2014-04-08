@@ -1216,7 +1216,11 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
+                <configuration>
+                    <!-- disable local OBR updates to avoid problems where non-OSGI Manifests
+                    get stored in .m2/repository -->
+                    <obrRepository>NONE</obrRepository>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>versions-maven-plugin</artifactId>
