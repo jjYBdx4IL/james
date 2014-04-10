@@ -17,7 +17,7 @@
     <name>Apache James :: Karaf :: Features</name>
 
     <properties>
-        <mime4j.version>0.8.0-SNAPSHOT</mime4j.version>
+        <mime4j.version>0.7.2</mime4j.version>
         <jutf7.version>1.0.0</jutf7.version>
         <commons-dbcp-bundle.version>1.4_3</commons-dbcp-bundle.version>
         <commons-configuration-osgi.version>1.9_1</commons-configuration-osgi.version>
