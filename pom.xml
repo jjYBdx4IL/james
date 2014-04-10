@@ -679,6 +679,11 @@
                 </exclusions>
             </dependency>
             <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.5.1</version>
+            </dependency>
+            <dependency>
               <groupId>javax.inject</groupId>
               <artifactId>javax.inject</artifactId>
               <version>${javax.inject.version}</version>
@@ -1385,9 +1390,8 @@
             <properties>
                 <javax.activation.groupId>javax.activation</javax.activation.groupId>
                 <javax.activation.artifactId>activation</javax.activation.artifactId>
-                <javax.mail.groupId>javax.mail</javax.mail.groupId>
-                <javax.mail.artifactId>mail</javax.mail.artifactId>
-                <javamail.version>1.5.0-b01</javamail.version>
+                <javax.mail.groupId>com.sun.mail</javax.mail.groupId>
+                <javax.mail.artifactId>javax.mail</javax.mail.artifactId>
             </properties>
         </profile>
         <profile>
