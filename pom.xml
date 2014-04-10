@@ -54,9 +54,7 @@
     <modules>
         <module>app</module>
 
-        <module>karaf/distribution</module>
-        <module>karaf/features</module>
-        <module>karaf/integration</module>
+        <module>karaf</module>
 
         <module>container/util</module>
         <module>container/cli</module>

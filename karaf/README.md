@@ -35,8 +35,8 @@ Project structure
 Build and run
 =============
 
-You can build the project by running the script provided in karaf folder:
-    $ ./build.sh
+You can build the project by running in karaf folder:
+    $ mvn clean install
 
 You can also build each project individually by running **$ mvn clean install** inside each maven project.
 
