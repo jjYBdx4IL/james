@@ -179,8 +179,19 @@ public class MimeMessageTest {
                 // geronimo javamail 1.4.3 NOTES:
                 // this headers are effectively added by geronimo javamail 1.4 version 1.8.3
                 // which is the right behavior anyway
-                +"Content-Transfer-Encoding: 7bit\r\n"
-                +"Content-Type: text/plain; charset=us-ascii\r\n"
+                //+"Content-Transfer-Encoding: 7bit\r\n"
+                //+"Content-Type: text/plain; charset=us-ascii\r\n"
+
+                //http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html :
+                //A body part is NOT to be interpreted as actually being an RFC 822 message.
+                //To begin with, NO header fields are actually required in body parts.
+                //A body part that starts with a blank line, therefore, is allowed and is
+                //a body part for which all default values are to be assumed. In such a
+                //case, the absence of a Content-Type header field implies that the encapsulation
+                //is plain US-ASCII text.
+                // btw: the geronimo javamail implementation is sooooo outdated, it cannot even
+                //      correctly do IMAP authentication. Please don't use it any more.
+                // v-- implementation used by Oracle JavaMail 1.5.0-b01.
 
                 + "\r\n"
                 + "third part\r\n"

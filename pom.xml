@@ -1379,15 +1379,19 @@
     <profiles>
         <profile>
             <id>oracle-javamail</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <javax.activation.groupId>javax.activation</javax.activation.groupId>
                 <javax.activation.artifactId>activation</javax.activation.artifactId>
                 <javax.mail.groupId>javax.mail</javax.mail.groupId>
                 <javax.mail.artifactId>mail</javax.mail.artifactId>
+                <javamail.version>1.5.0-b01</javamail.version>
             </properties>
         </profile>
         <profile>
-            <id>enfore</id>
+            <id>enforce</id>
             <build>
                 <plugins>
                     <plugin>
